@@ -4,8 +4,7 @@ FROM gitpod/workspace-full:latest
 
 USER root
 # Install custom tools, runtime, etc.
-#RUN apt-get update && apt-get install -y firefox net-tools \
-#    && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+RUN apt-get update && apt-get install -y libsndfile1
 
 RUN pip3 install Flask flask-cors GitPython
 RUN pip3 install TTS
